@@ -29,7 +29,7 @@
       # Create /etc/zshrc that loads the nix-darwin environment.
       programs.zsh.enable = true;  # default shell on catalina
       # programs.fish.enable = true;
-
+      system.primaryUser = "victor.fondevilla";
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
 
@@ -57,6 +57,7 @@
         NSGlobalDomain = {
           "com.apple.swipescrolldirection" = false;
           AppleEnableSwipeNavigateWithScrolls = true;
+	  "com.apple.mouse.tapBehavior" = 1
         };
         NSGlobalDomain."com.apple.trackpad.trackpadCornerClickBehavior" = 1;
 
